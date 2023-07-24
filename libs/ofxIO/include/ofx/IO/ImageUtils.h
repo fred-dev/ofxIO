@@ -12,6 +12,7 @@
 #include "ofTypes.h"
 #include "ofFileUtils.h"
 #include "ofImage.h"
+#include "ofPixels.h"
 
 
 namespace ofx {
