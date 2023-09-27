@@ -304,14 +304,63 @@ namespace doj
      Algorithm". If the objects are no std::string, they must
      implement "std::ostream operator<< (std::ostream&, const Ty&)".
      */
+    
+	/*/make a c++ 17 version of this
     template<class Ty>
-    struct alphanum_less : public std::binary_function<Ty, Ty, bool>
+    struct alphanum_less : public std::binary_function; <Ty, Ty, bool>
     {
         bool operator()(const Ty& left, const Ty& right) const
         {
             return alphanum_comp(left, right) < 0;
         }
     };
+    */
+	template <typename Ty>
+	struct alphanum_less {
+		bool operator()(const Ty & left, const Ty & right) const {
+				return alphanum_comp(left, right) < 0;
+		}
+
+	private:
+		static int alphanum_comp(const Ty & s1, const Ty & s2) {
+				typename Ty::const_iterator it1 = s1.begin();
+				typename Ty::const_iterator it2 = s2.begin();
+
+				while (it1 != s1.end() && it2 != s2.end()) {
+					if (std::isdigit(*it1) && std::isdigit(*it2)) {
+						// Compare numbers
+						long num1 = 0;
+						long num2 = 0;
+
+						while (it1 != s1.end() && std::isdigit(*it1)) {
+							num1 = num1 * 10 + (*it1 - '0');
+							++it1;
+						}
+
+						while (it2 != s2.end() && std::isdigit(*it2)) {
+							num2 = num2 * 10 + (*it2 - '0');
+							++it2;
+						}
+
+						if (num1 != num2)
+							return (num1 < num2) ? -1 : 1;
+					} else {
+						// Compare characters
+						if (*it1 != *it2)
+							return (*it1 < *it2) ? -1 : 1;
+						++it1;
+						++it2;
+					}
+				}
+
+				if (it1 == s1.end() && it2 == s2.end())
+					return 0;
+				else
+					return (it1 == s1.end()) ? -1 : 1;
+		}
+	};
+	
+        
     
 }
 
