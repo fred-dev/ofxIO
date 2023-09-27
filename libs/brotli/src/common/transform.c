@@ -12,7 +12,7 @@ extern "C" {
 
 /* RFC 7932 transforms string data */
 static const char kPrefixSuffix[217] =
-      "\1 \2, \10 of the \4 of \2s \1.\5 and \4 "
+      "\1 \2, \10 of the \4 of \2s \1.\5 and \4"
 /* 0x  _0 _2  __5        _E    _3  _6 _8     _E */
       "in \1\"\4 to \2\">\1\n\2. \1]\5 for \3 a \6 "
 /* 2x     _3_ _5    _A_  _D_ _F  _2 _4     _A   _E */
