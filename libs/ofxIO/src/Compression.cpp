@@ -13,6 +13,7 @@
 #include "Poco/Version.h"
 #include "snappy.h"
 #include "lz4.h"
+#include "zlib.h"
 #include "ofLog.h"
 
 #include "brotli/decode.h"
@@ -488,7 +489,7 @@ std::string Compression::version(Type type)
         case BR:
         {
             std::stringstream ss;
-            ss << BROTLI_VERSION;
+           // ss << BROTLI_VERSION;
             return ss.str();
         }
         case NONE:

@@ -10,4 +10,4 @@ meta:
 	ADDON_VERSION = develop
 	ADDON_CATEGORY = utilities
 common:
-	ADDON_DEPENDENCIES = ofxPoco
+	ADDON_DEPENDENCIES = ofxPocoFat
