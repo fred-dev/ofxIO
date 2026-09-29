@@ -10,7 +10,7 @@
 
 #include <deque>
 #include "ofConstants.h"
-#include <nlohmann/json.hpp>
+#include "ofJson.h"
 #include "Poco/FileStream.h"
 #include "ofx/DirectoryWatcher.h"
 #include "ofx/RecursiveDirectoryIterator.h"

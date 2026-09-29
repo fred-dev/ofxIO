@@ -8,7 +8,7 @@
 #pragma once
 
 
-#include <nlohmann/json.hpp>
+#include "ofJson.h"
 #include "ofFileUtils.h"
 #include "ofx/IO/Compression.h"
 

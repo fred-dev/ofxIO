@@ -1,2 +1,2 @@
 ofxIO
-ofxPoco
+ofxPocoHeaders

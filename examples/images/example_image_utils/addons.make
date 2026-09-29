@@ -1,3 +1,3 @@
 ofxGui
 ofxIO
-ofxPoco
+ofxPocoHeaders
