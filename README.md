@@ -1,5 +1,8 @@
 # ofxIO
 
+> **About this fork:** fork of [bakercp/ofxIO](https://github.com/bakercp/ofxIO). This branch matches upstream plus C++17 and image utility fixes (2023). The `poco_headers_only` branch builds against [ofxPocoHeaders](https://github.com/fred-dev/ofxPocoHeaders) instead of the old ofxPoco addon.
+
+
 ## Description
 
 A collection of I/O core utils for [openFrameworks](https://openframeworks.cc).
